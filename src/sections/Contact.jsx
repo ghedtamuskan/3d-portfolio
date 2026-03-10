@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 import TitleHeader from "../components/TitleHeader";
 
 const ContactExperience = lazy(() =>
-    import("../components/models/contact/ContactExperience.jsx")
+    import("../components/Models/contact/ContactExperience.jsx")
   );
 
 const Contact = () => {
