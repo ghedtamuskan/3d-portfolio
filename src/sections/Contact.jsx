@@ -4,8 +4,8 @@ import emailjs from "@emailjs/browser";
 import TitleHeader from "../components/TitleHeader";
 
 const ContactExperience = lazy(() =>
-    import("../components/models/contact/ContactExperience").then((m) => ({ default: m.default }))
-);
+    import("../components/models/contact/ContactExperience.jsx")
+  );
 
 const Contact = () => {
     const formRef = useRef(null);
