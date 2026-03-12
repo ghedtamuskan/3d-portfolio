@@ -8,7 +8,7 @@ This portfolio highlights my work in **Full Stack Development, AI-powered applic
 
 ## 🌐 Live Demo
 
-🔗 https://muskanghedta-portfolio-link.vercel.app
+🔗 https://3d-portfolio-8t9c-git-main-ghedtamuskans-projects.vercel.app/
 
 Deployed on Vercel.
 
