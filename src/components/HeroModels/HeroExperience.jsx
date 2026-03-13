@@ -12,9 +12,9 @@ const HeroExperience = () => {
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
 
   return (
-    <Canvas 
-    style={{ width: "100%", height: "100%" }}
-    camera={{ position: [0, 0, 15], fov: 45 }}
+    <Canvas
+      style={{ width: "100%", height: "100%" }}
+      camera={{ position: [0, 0, 15], fov: 45 }}
     >
       {/* deep blue ambient */}
       <ambientLight intensity={0.2} color="#1a1a40" />
@@ -32,8 +32,8 @@ const HeroExperience = () => {
         <HeroLights />
         <Particles count={100} />
         <group
-          scale={isMobile ? 0.7 : 1}
-          position={[0, -3.5, 0]}
+          scale={isMobile ? 1.0 : isTablet ? 1.2 : 1.3}
+          position={[isMobile ? -1.5 : isTablet ? -2.0 : 0, isMobile ? -2.8 : isTablet ? -4.0 : -5.2, 0]}
           rotation={[0, -Math.PI / 4, 0]}
         >
           <Room />

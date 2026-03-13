@@ -11,13 +11,13 @@ function RoomInner(props) {
 
     const customMaterials = useMemo(() => {
         return {
-            curtain: new THREE.MeshPhongMaterial({ color: "#d90429" }),
+            curtain: new THREE.MeshPhongMaterial({ color: "#ef233c" }), // Vibrant red
             body: new THREE.MeshPhongMaterial({ map: matcapTexture }),
-            table: new THREE.MeshPhongMaterial({ color: "#582f0e" }),
+            table: new THREE.MeshPhongMaterial({ color: "#D2B48C" }), // Light natural wood
             radiator: new THREE.MeshPhongMaterial({ color: "#fff" }),
             comp: new THREE.MeshStandardMaterial({ color: "#fff" }),
-            pillow: new THREE.MeshPhongMaterial({ color: "#8338ec" }),
-            chair: new THREE.MeshPhongMaterial({ color: "#000" }),
+            pillow: new THREE.MeshPhongMaterial({ color: "#4DA8DA" }), // Engaging blue
+            chair: new THREE.MeshPhongMaterial({ color: "#E0E0E0" }), // Light engaging gray
         };
     }, [matcapTexture]);
 

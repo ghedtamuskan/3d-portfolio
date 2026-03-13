@@ -83,8 +83,17 @@ section {
         position: relative;
         min-height: 100vh;
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 15vh;
       }
+    @media (min-width: 1024px) {
+        .hero-layout {
+            flex-direction: row;
+            align-items: center;
+            padding-top: 0;
+        }
+    }
 
     .hero-text {
         @apply flex flex-col justify-center md:text-[50px] text-[30px] font-semibold relative z-10 pointer-events-none;
@@ -105,27 +114,25 @@ section {
         display: block;
       }
     .hero-3d-layout {
-        position: absolute;
- right: -40%;
-        top: 10%;
-        width: 65%;
-        height: 90%;
-      }
-    @media (max-width: 768px) {
-        .hero-3d-layout {
-            position: relative;
-            top: 0;
-            height: 55vh;
-        }
-      }
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
     
+    @media (min-width: 1024px) {
+        .hero-3d-layout {
+            position: absolute;
+            width: 100%;
+            max-width: 100%;
+            top: -2rem; /* Little up */
+            right: 8rem;
+            max-height: 85vh;
+        }
+    }
     @media (min-width: 1280px) {
         .hero-3d-layout {
-            width: 70%;
-            max-width: 70%;
-            top: -5rem;
-            right: -7rem;
-            max-height: 70vh;
+            top: -4rem; /* Little up for xl screens */
+            right: 10rem;
         }
     }
     .hero-3d-wrapper {
@@ -136,10 +143,20 @@ section {
       
       .hero-3d-figure {
         position: relative;
-      width:60%;
-      height:100vh;
-
-
+        width: 100%;
+        height: 60vh; /* Giving it more height on mobile so it can be larger */
+        margin-top: -3rem; /* Strongly reduced gap between text block and model */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      @media (min-width: 1024px) {
+        .hero-3d-figure {
+            width: 60%;
+            height: 100vh;
+            margin-top: 0;
+            display: block;
+        }
       }
 
     .navbar {

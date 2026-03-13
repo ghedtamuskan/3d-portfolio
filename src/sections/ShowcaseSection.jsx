@@ -63,8 +63,8 @@ const ShowcaseSection = () => {
                             AI Career Coach – Intelligent Career Guidance Platform
                             </h2>
                             <p className="text-white-50 md:text-lg mt-3 leading-relaxed">
-                            An AI-powered platform  that delivers personalized industry insights, generate cover letters and resume,
- and supports interview preperation  using AI-driven analysis
+                            An AI-powered platform  that delivers personalized industry insights, generate cover letters and resumes,
+ and supports interview preperation resources using OpenAI integration.
   and a modern responsive interface.
 </p>
 
@@ -76,7 +76,7 @@ const ShowcaseSection = () => {
                     <div className="project-list-wrapper overflow-hidden ">
 
                         <div className="project2" ref={project2Ref}>
-                            <div className="image-wrapper bg-[#ffefdb]">
+                            <div className="image-wrapper bg-[#ffe7ea]">
                             <a 
     href="https://vacation-rental-platform-chi.vercel.app/listings"
     target="_blank"
@@ -85,15 +85,23 @@ const ShowcaseSection = () => {
                                 <img src="/images/project2.png" alt="project2" />
                                 </a>
                             </div>
-                            <h2>StayHub - Full Stack Vacation Rental Platform</h2>
+                            <h2>StayHub - Full Stack  Rental Platform</h2>
                             
                         </div>
 
                         <div className="project3" ref={project3Ref}>
-                            <div className="image-wrapper bg-[#ffe7eb]">
+                            <div className="image-wrapper bg-gray-500">
+                            <a 
+    href="https://3d-portfolio-8t9c-git-main-ghedtamuskans-projects.vercel.app/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
                                 <img src="/images/project3.png" alt="project3" />
+                                </a>    
                             </div>
-                            <h2>Library Management Platform</h2>
+                            <h2>  3D Interactive portfolio - built with React, Three.js, and GSAP.</h2>
+                            
+
                         </div>
 
                     </div>
