@@ -49,11 +49,9 @@ useGSAP(() => {
 
                 <div className="flex-1">
                     <p className='mb-10 max-w-2xl font-Ovo'>
-                        Hi, I’m Muskan, a web developer specializing in building responsive,
-                        high-performance web applications. I work with HTML, CSS,
-                        JavaScript, React, Node.js, Express, MongoDB and I’m expanding my
-                        expertise in Three.js, GSAP animations, REST APIs, and modern
-                        deployment workflows.
+                        Hi, I’m Muskan, I build fast, scalable web apps with a focus on clean design and real-world performance.
+                        More than just features, I focus on building applications that are structured, scalable, and ready for real-world use.
+
                     </p>
 
                     <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>

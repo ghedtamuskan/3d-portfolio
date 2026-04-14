@@ -30,9 +30,9 @@
  ];
 
   const counterItems = [
-      { value: 3, suffix: "+", label: "Year of Coding Journey" },
-      { value: 15, suffix: "+", label: "Academic & Personal Projects" },
-      { value: 18, suffix: "+", label: " Technologies learned" },
+      { value: 3, suffix: "+", label: "Years of Coding Journey" },
+      { value: 15, suffix: "+", label: "Projects Built & Deployed" },
+      { value: 18, suffix: "+", label: " Technologies Explored" },
       { value: 100, suffix: "%", label: "Dedication to Improvement" },
   ];
 

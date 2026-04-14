@@ -73,12 +73,11 @@ const Hero = () => {
                             </div>
 
                             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-                                Hi, I’m MUSKAN GHEDTA, a developer based in India with a passion for
-                                code.
+                                Hi, I’m Muskan Ghedta — a full-stack developer focused  <br />on  creating fast, responsive, and real-world web applications.
                             </p>
 
                             <Button
-                                text="See My Work"
+                                text="Explore My Work"
                                 className="md:w-80 md:h-16 w-60 h-12"
                                 id="counter"
                             />
