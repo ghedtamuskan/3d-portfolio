@@ -41,9 +41,11 @@ const Particles = ({ count = 150 }) => {
         return { particles: temp, positions: pos, speeds: spd, snowTexture: texture };
     }, [count]);
 
-    useFrame(() => {
+    useFrame((state) => {
         if (!mesh.current?.geometry?.attributes?.position) return;
         const positionsArr = mesh.current.geometry.attributes.position.array;
+        const time = state.clock.getElapsedTime();
+
         for (let i = 0; i < count; i++) {
             let x = positionsArr[i * 3];
             let y = positionsArr[i * 3 + 1];
@@ -54,7 +56,7 @@ const Particles = ({ count = 150 }) => {
             // Add slight horizontal sway (sine wave) mapping to time/offset
             const offset = particles[i].offset;
             const sway = particles[i].swaySpeed;
-            x += Math.sin(Date.now() * sway + offset) * 0.002;
+            x += Math.sin(time * 0.5 + offset) * 0.002; // Using state.clock time
             
             if (y < -5) y = Math.random() * 5 + 10;
             

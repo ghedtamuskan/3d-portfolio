@@ -1,5 +1,7 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useProgress } from "@react-three/drei";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 import Button from "../components/HeroModels/button.jsx";
 import { words } from "../constants";
@@ -16,7 +18,24 @@ import Footer from "./Footer.jsx";
 const Hero = () => {
     const sectionRef = useRef(null);
     const { progress } = useProgress();
-    const isLoaded = progress === 100;
+    const [isReady, setIsReady] = useState(false);
+
+    useEffect(() => {
+        if (progress >= 90) {
+            setIsReady(true);
+        }
+    }, [progress]);
+
+    useGSAP(() => {
+        if (isReady) {
+            gsap.to(".hero-layout", {
+                opacity: 1,
+                duration: 0.6,
+                ease: "power2.out",
+                force3D: true,
+            });
+        }
+    }, [isReady]);
 
 
     return (
@@ -26,11 +45,7 @@ const Hero = () => {
                     <img src="/images/bg.png" alt="" />
                 </div>
 
-                <div
-                    className={`hero-layout relative z-10 transition-opacity duration-1000 ${
-                        isLoaded ? "opacity-100" : "opacity-0"
-                    }`}
-                >
+                <div className="hero-layout relative z-10 opacity-0 pointer-events-none data-[ready=true]:pointer-events-auto" data-ready={isReady}>
                     {/* LEFT: Hero Content */}
                     <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
                         <div className="flex flex-col gap-7 ">

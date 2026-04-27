@@ -15,6 +15,12 @@ const HeroExperience = () => {
     <Canvas
       style={{ width: "100%", height: "100%" }}
       camera={{ position: [0, 0, 15], fov: 45 }}
+      dpr={[1, 2]} // Optimize for high-resolution screens
+      gl={{ 
+        antialias: true, 
+        powerPreference: "high-performance",
+        alpha: true 
+      }}
     >
       {/* deep blue ambient */}
       <ambientLight intensity={0.2} color="#1a1a40" />

@@ -107,6 +107,7 @@ section {
 
         .slide {
             @apply absolute pt-0 px-2 md:px-5 py-[30px] h-[48px] md:h-[78px] md:translate-y-1 translate-y-0 overflow-hidden;
+            will-change: transform;
         }
     }
 
@@ -282,6 +283,7 @@ section {
 
         .bg-circle {
             @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 w-[120%] h-[120%] group-hover:size-10 group-hover:right-10 rounded-full bg-white-50 transition-all duration-500;
+            will-change: transform, opacity, width, height;
         }
 
         .text {
@@ -404,6 +406,7 @@ section {
     display: flex;
     flex-direction: column;
     animation: wordSlider 21s infinite cubic-bezier(0.9, 0.01, 0.3, 0.99);
+    will-change: transform;
 }
 
 @keyframes wordSlider {
