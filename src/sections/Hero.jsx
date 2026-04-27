@@ -1,5 +1,3 @@
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 import { useRef, useState } from "react";
 
 import Button from "../components/HeroModels/button.jsx";
@@ -15,26 +13,9 @@ import Footer from "./Footer.jsx";
 
 
 const Hero = () => {
-    const heroRef = useRef(null);
     const sectionRef = useRef(null);
     const [show3D, setShow3D] = useState(true); // Load synchronously at the exact same time as text
-    useGSAP(
-        () => {
-            gsap.fromTo(
-                heroRef.current.querySelectorAll(" :scope>h1"),
-                { y: 40, opacity: 0 },
-                {
-                    y: 0,
-                    opacity: 1,
-                    stagger: 0.4, // Longer stagger so they come in sequence one-by-one
-                    duration: 0.9,
-                    ease: "power2.out",
-                    force3D: true,
-                }
-            );
-        },
-        { scope: heroRef } // ✅ IMPORTANT
-    );
+
 
     return (
         <HeroSceneProvider>
@@ -47,7 +28,7 @@ const Hero = () => {
                     {/* LEFT: Hero Content */}
                     <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
                         <div className="flex flex-col gap-7 ">
-                            <div className="hero-text" ref={heroRef}>
+                            <div className="hero-text">
                                 <h1>
                                     Shaping
                                     <span className="slide">
