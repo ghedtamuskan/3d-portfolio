@@ -1,4 +1,5 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
+import { useProgress } from "@react-three/drei";
 
 import Button from "../components/HeroModels/button.jsx";
 import { words } from "../constants";
@@ -14,7 +15,8 @@ import Footer from "./Footer.jsx";
 
 const Hero = () => {
     const sectionRef = useRef(null);
-    const [show3D, setShow3D] = useState(true); // Load synchronously at the exact same time as text
+    const { progress } = useProgress();
+    const isLoaded = progress === 100;
 
 
     return (
@@ -24,7 +26,11 @@ const Hero = () => {
                     <img src="/images/bg.png" alt="" />
                 </div>
 
-                <div className="hero-layout relative z-10">
+                <div
+                    className={`hero-layout relative z-10 transition-opacity duration-1000 ${
+                        isLoaded ? "opacity-100" : "opacity-0"
+                    }`}
+                >
                     {/* LEFT: Hero Content */}
                     <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
                         <div className="flex flex-col gap-7 ">
@@ -68,7 +74,7 @@ const Hero = () => {
                     {/* 3D: on mobile below button, on desktop right side */}
                     <figure className="hero-3d-figure">
                         <div className="hero-3d-layout">
-                            {show3D && <HeroExperience sectionRef={sectionRef} />}
+                            <HeroExperience sectionRef={sectionRef} />
                         </div>
                     </figure>
                 </div>
